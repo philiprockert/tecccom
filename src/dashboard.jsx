@@ -13,12 +13,12 @@ function Dashboard() {
           label: 'Ventas Mensuales',
           data: [12, 19, 3, 5, 2],
           backgroundColor: [
-            'rgba(75, 192, 192, 0.6)',
-            'rgba(90, 234, 123, 0.6)',
+            'rgba(75, 4, 234, 0.6)',
+            'rgba(90, 233, 123, 0.6)',
           ],
           borderColor: [
-            'rgba(75, 192, 192, 1)',
-            'rgba(90, 234, 123, 1)',
+            'rgba(75, 4, 234, 0.6)',
+            'rgba(90, 233, 123, 1)',
           ],
           borderWidth: 1,
         },

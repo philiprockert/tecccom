@@ -15,6 +15,7 @@ h1 {
 
 /* Estilos para el gráfico de barras */
 .chart {
+  width: 40vw;
   margin: 20px 0;
 }
 
@@ -139,3 +140,5 @@ h1 {
     font-size: 30px;
   }
 }
+
+
