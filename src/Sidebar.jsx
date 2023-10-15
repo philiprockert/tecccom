@@ -10,7 +10,7 @@ function Sidebar() {
     const isLoginRoute = location.pathname === '/login';
   return (
     
-      <aside id={`side ${!isLoginRoute ? '' : 'hidde'}`} className={`sidebar ${isSidebarOpen ? '' : 'hidden'}`}>
+      <aside  className={`sidebar ${isSidebarOpen && !isLoginRoute ? '' : 'hidden'}`}>
       <button className="toggle-button" onClick={toggleSidebar}>
         ☰
       </button>

@@ -4,7 +4,7 @@ import { Login } from './login';
 import { Dashboard } from './dashboard';
 import {Report} from './Report.jsx';
 import Sends from './sends';
-import Config from './config';
+import {Configuracion} from './config';
 import { Sidebar } from './Sidebar';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
@@ -22,7 +22,7 @@ function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/report" element={<Report />} />
           <Route path="/sends" element={<Sends />} />
-          <Route path="/config" element={<Config />} />
+          <Route path="/config" element={<Configuracion />} />
         </Routes>
       </div>
     </div>

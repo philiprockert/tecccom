@@ -40,6 +40,10 @@ function Sends() {
       <div>
         <label className="sends-label">Tipo de Comunicación:</label>
         <select className="sends-select" value={communicationType} onChange={handleCommunicationTypeChange}>
+        <option value="sms">Mensaje de Texto</option>
+          <option value="sms_doble_via">Mensaje Doble Vía</option>
+          <option value="llamadas">Llamadas</option>
+          <option value="llamadas_doble_via">Llamadas Doble Vía</option>
           {/* ...opciones del select */}
         </select>
       </div>
@@ -47,7 +51,24 @@ function Sends() {
       <div>
         <label className="sends-label">Opción de Envío:</label>
         {/* ...radio buttons */}
-      </div>
+        <input
+          type="radio"
+          name="bulk"
+          value="masivo"
+          checked={isBulk}
+          onChange={handleBulkOptionChange}
+        />
+        <label>Envío Masivo</label>
+
+          <input
+            type="radio"
+            name="bulk"
+            value="simple"
+            checked={!isBulk}
+            onChange={handleBulkOptionChange}
+          />
+          <label>Envío Simple</label>
+                </div>
 
       {isBulk ? (
         <div>

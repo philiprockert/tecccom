@@ -1,0 +1,45 @@
+/* Estilos generales para la sección de configuración */
+.config-section {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 5%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos para el título de la sección */
+  .config-title {
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para los elementos de formulario (etiquetas y campos) */
+  .config-label {
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  .config-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Estilos para los botones */
+  .config-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .config-button:hover {
+    background-color: #0056b3;
+  }
+  
