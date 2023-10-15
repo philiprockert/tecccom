@@ -20,7 +20,7 @@ function App() {
         <Route path="/sends" element={<Sends />} />
         <Route path="/config" element={<Config />} />
       </Routes>
-      <Link to="/login">log</Link>
+      
     </BrowserRouter>
   );
 }
