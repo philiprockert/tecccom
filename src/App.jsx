@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import { Login } from './login';
-import { Internav } from './Internav';
+
 import { Dashboard } from './dashboard';
 import Report from './report';
 import Sends from './sends';
