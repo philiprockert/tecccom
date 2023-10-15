@@ -12,6 +12,7 @@ import './App.css';
 function App() {
   return (
     <BrowserRouter>
+      
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
@@ -19,6 +20,7 @@ function App() {
         <Route path="/sends" element={<Sends />} />
         <Route path="/config" element={<Config />} />
       </Routes>
+      <Link to="/login">log</Link>
     </BrowserRouter>
   );
 }
