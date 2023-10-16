@@ -6,6 +6,7 @@ import {Report} from './Report.jsx';
 import Sends from './sends';
 import {Configuracion} from './config';
 import { Sidebar } from './Sidebar';
+import ChatPopup from './ChatPopup.jsx';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
@@ -16,7 +17,9 @@ function App() {
 
     <div className="app">
       <Sidebar /> {/* Agrega el Sidebar a tu App */}
+      <ChatPopup/>
       <div className='content'>
+        
       <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<Dashboard />} />

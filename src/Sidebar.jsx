@@ -11,6 +11,7 @@ function Sidebar() {
   return (
     
       <aside  className={`sidebar ${isSidebarOpen && !isLoginRoute ? '' : 'hidden'}`}>
+      
       <button className="toggle-button" onClick={toggleSidebar}>
         ☰
       </button>

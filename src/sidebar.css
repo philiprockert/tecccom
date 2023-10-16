@@ -66,7 +66,7 @@
 .sidebar.hidden {
   transform: translateX(-80%); /* Oculta la barra lateral fuera del área visible */
 }
-#side.hidde{
+.side.hidden{
   transform: translateX(-100%); /* Oculta la barra lateral fuera del área visible */
 }
 .toggle-button {

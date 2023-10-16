@@ -2,6 +2,7 @@
 import React from 'react';
 import { useState } from 'react';
 import './report.css'
+  
 
 function Report() {
   const [startDate, setStartDate] = useState('');
@@ -20,7 +21,7 @@ function Report() {
     // Puedes utilizar bibliotecas como exceljs o xlsx para crear el archivo Excel.
     // A modo de ejemplo, aquí solo se mostrará un mensaje con las fechas seleccionadas.
     alert(`Generando informe desde ${startDate} hasta ${endDate}`);
-  };
+  };  
   return (
     <>
     <div className='report-section'>
