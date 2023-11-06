@@ -9,7 +9,8 @@ function Login  () {
   return (
     <div className="login-container">
       <div className="login-content">
-        <h1 className="login-title">Iniciar Sesión</h1>
+        <h1 className="login-title">OMNICOM</h1>
+        <p className="login-title">Iniciar Sesión</p>
         <form className="login-form">
           <input onChange={(e)=>setUser(e.target.value)}
             type="text"

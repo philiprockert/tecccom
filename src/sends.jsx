@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import { Sidebar } from './Sidebar';
+import { ParseExcel } from './ParseExcel';
+import * as XLSX from 'xlsx';
+
 import './Sends.css'; // Importa el archivo de estilos CSS
 
 function Sends() {
@@ -8,11 +12,18 @@ function Sends() {
   const [message, setMessage] = useState('');
   const [isScheduled, setIsScheduled] = useState(false);
   const [scheduledDateTime, setScheduledDateTime] = useState('');
-
   const handleCommunicationTypeChange = (e) => {
     setCommunicationType(e.target.value);
   };
+  const [showModal, setShowModal] = useState(false);
 
+  const openModal = () => {
+    setShowModal(true);
+  }
+
+  const closeModal = () => {
+    setShowModal(false);
+  }
   const handleBulkOptionChange = () => {
     setIsBulk(!isBulk);
   };
@@ -33,8 +44,11 @@ function Sends() {
     setScheduledDateTime(e.target.value);
   };
 
+  
+
   return (
     <div className="sends-section"> {/* Aplica la clase CSS al contenedor */}
+    <Sidebar/>
       <h1 className="sends-title">Envío de Comunicación</h1> {/* Aplica la clase CSS al título */}
 
       <div>
@@ -72,8 +86,7 @@ function Sends() {
 
       {isBulk ? (
         <div>
-          <label className="sends-label">Números de Contacto (cargar archivo Excel):</label>
-          <input type="file" accept=".xlsx, .csv" />
+          <ParseExcel />
         </div>
       ) : (
         <div>

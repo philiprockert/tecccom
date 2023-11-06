@@ -1,5 +1,6 @@
 // Dashboard.js
 import React from 'react';
+import { Sidebar } from './Sidebar';
 import { Bar, Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, 
     LinearScale, BarElement, Title, Tooltip, Legend, LineElement, PointElement} from "chart.js";
@@ -35,6 +36,7 @@ function Dashboard() {
   
     return (
       <div className="dashboard">
+        <Sidebar/>
         <h1>Dashboard</h1>
         <div className="chart">
           <Bar data={barData} options={options} />

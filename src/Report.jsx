@@ -1,6 +1,7 @@
 // Report.js
 import React from 'react';
 import { useState } from 'react';
+import { Sidebar } from './Sidebar';
 import './report.css'
   
 
@@ -24,6 +25,7 @@ function Report() {
   };  
   return (
     <>
+    <Sidebar/>
     <div className='report-section'>
     <h1 className='report-title'>Generar Informe</h1>
     <div>

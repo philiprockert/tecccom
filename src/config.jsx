@@ -1,5 +1,6 @@
 // Config.js
 import React, { useState } from 'react';
+import { Sidebar } from './Sidebar';
 import './Config.css'
 
 function Configuracion() {
@@ -48,6 +49,7 @@ function Configuracion() {
 
   return (
     <div className="config-section">
+      <Sidebar/>
       <h1 className="config-title">Configuración</h1>
 
       {/* Sección de cuentas y usuarios */}

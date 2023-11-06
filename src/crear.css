@@ -1,0 +1,46 @@
+/* Estilo para el contenedor principal (div) */
+div .create-div{
+    display: flex; /* Mostrar los elementos en línea horizontal */
+    align-items: center; /* Centrar verticalmente los elementos dentro del div */
+    justify-content: center; /* Centrar horizontalmente los elementos dentro del div */
+    height: 100vh; /* Ajustar el alto al 100% del viewport */
+    background-color: #f0f0f0; /* Color de fondo */
+  }
+  
+  /* Estilo para el formulario */
+  form {
+    background-color: #fff; /* Fondo del formulario */
+    padding: 10vw; /* Espaciado interior del formulario */
+    border: 1px solid #ccc; /* Borde del formulario */
+    border-radius: 5px; /* Esquinas redondeadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Alinear contenido al centro */
+  }
+  
+  /* Estilo para los campos de entrada (input) */
+  input {
+    width: 100%; /* Ancho del 100% para llenar el contenedor */
+    padding: 10px; /* Espaciado interior del campo de entrada */
+    margin: 5px 0; /* Espaciado vertical entre campos */
+    border: 1px solid #ccc; /* Borde del campo de entrada */
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-size: 16px; /* Tamaño de fuente */
+  }
+  
+  /* Estilo para el botón de envío (button) */
+  .enviardatos {
+    width: 100%; /* Ancho del 100% para llenar el contenedor */
+    padding: 10px; /* Espaciado interior del botón */
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+  }
+  
+  /* Estilo para el botón de envío al pasar el mouse */
+  button:hover {
+    background-color: #0056b3; /* Cambiar el color de fondo al pasar por encima */
+  }
+  

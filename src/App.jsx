@@ -3,9 +3,11 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import { Login } from './login';
 import { Dashboard } from './dashboard';
 import {Report} from './Report.jsx';
+import { CreateCount } from './CreateCount';
 import Sends from './sends';
 import {Configuracion} from './config';
 import { Sidebar } from './Sidebar';
+import { ParseExcel } from './ParseExcel';
 import ChatPopup from './ChatPopup.jsx';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
@@ -16,7 +18,7 @@ function App() {
     <BrowserRouter>
 
     <div className="app">
-      <Sidebar /> {/* Agrega el Sidebar a tu App */}
+      
       <ChatPopup/>
       <div className='content'>
         
@@ -26,6 +28,8 @@ function App() {
           <Route path="/report" element={<Report />} />
           <Route path="/sends" element={<Sends />} />
           <Route path="/config" element={<Configuracion />} />
+          <Route path="/create" element={<CreateCount />} />
+          <Route path="/leerexcel" element={<ParseExcel />} />
         </Routes>
       </div>
     </div>

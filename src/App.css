@@ -1,3 +1,6 @@
+*{
+  margin-left: 0.4vw;
+}
 /* Estilos base para pantallas pequeñas (mobile-first) */
 .dashboard {
   text-align: center;

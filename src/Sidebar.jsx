@@ -29,8 +29,13 @@ function Sidebar() {
           <Link to="/config">Configuración</Link>
         </li>
         <li>
+          <Link to="/create">Cuentas</Link>
+        </li>
+        <li>
           <Link to="/login">Cerrar sesion</Link>
         </li>
+        
+        
       </ul>
     </aside>
   );
