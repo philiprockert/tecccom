@@ -37,7 +37,7 @@ function CreateCount(){
     
        
         return (
-          <div>
+          <div className="create-div">
             <Sidebar/>
             <form onSubmit={handleSubmit}>
               <input type="text" name="nombre" placeholder="Nombre" onChange={handleInputChange} />

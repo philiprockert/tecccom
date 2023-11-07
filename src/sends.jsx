@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Sidebar } from './Sidebar';
-import { ParseExcel } from './ParseExcel';
+import { Modal } from "./Modal";
 import * as XLSX from 'xlsx';
 
 import './Sends.css'; // Importa el archivo de estilos CSS
@@ -15,15 +15,7 @@ function Sends() {
   const handleCommunicationTypeChange = (e) => {
     setCommunicationType(e.target.value);
   };
-  const [showModal, setShowModal] = useState(false);
-
-  const openModal = () => {
-    setShowModal(true);
-  }
-
-  const closeModal = () => {
-    setShowModal(false);
-  }
+ 
   const handleBulkOptionChange = () => {
     setIsBulk(!isBulk);
   };
@@ -43,8 +35,32 @@ function Sends() {
   const handleScheduledDateTimeChange = (e) => {
     setScheduledDateTime(e.target.value);
   };
-
   
+  /*modal*/
+  const [selectvar, setSelectvar] = useState('');
+  const [filename, setFilename] = useState(null);
+  const [sheetname, setSheetname] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+  function asignarVariables (e)  {
+    setSelectvar(e.target.value);
+    setMessage(message +'{{'+e.target.value+'}}')
+  }
+  const handleFile = async (e) => {
+    const file = e.target.files[0];
+    setFilename(file.name);
+
+    const data = await file.arrayBuffer();
+    const workbook = XLSX.read(data);
+    const worksheet = workbook.Sheets[workbook.SheetNames[0]];
+    const raw_data = XLSX.utils.sheet_to_json(worksheet);
+    setSheetname(raw_data);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
 
   return (
     <div className="sends-section"> {/* Aplica la clase CSS al contenedor */}
@@ -85,8 +101,44 @@ function Sends() {
                 </div>
 
       {isBulk ? (
+        <div className='parse-excel'>
+          <h1>Selecciona un archivo</h1>
+      <input type="file" onChange={(e) => handleFile(e)} />
+
+      {sheetname.length > 0 && (
         <div>
-          <ParseExcel />
+          <h1>Elige un variable</h1>
+          <select className="var-select" value={selectvar}onChange={asignarVariables} >
+            
+            {Object.keys(sheetname[0]).map((columnName, index) => (  
+              <option key={index} value={columnName} onChange={asignarVariables} >
+                {columnName}
+              </option>
+            ))}
+          </select>
+
+          <Modal show={showModal} onClose={closeModal} title="Datos del archivo" data={
+            <table>
+              <thead>
+                <tr>
+                  {Object.keys(sheetname[0]).map((columnName, index) => (
+                    <th key={index}>{columnName}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {sheetname.map((rowData, index) => (
+                  <tr key={index}>
+                    {Object.keys(sheetname[0]).map((columnName, columnIndex) => (
+                      <td key={columnIndex}>{rowData[columnName]}</td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          } />
+        </div>
+      )}
         </div>
       ) : (
         <div>
